@@ -1,0 +1,47 @@
+
+.article-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+.titlecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+
+.titlecontainer img {
+    margin-right: 15px; 
+    width: 300px; 
+    height: auto; 
+    margin-bottom: 5px;
+}
+
+
+
+.body {
+    margin-bottom: 5px; 
+}
+
+.end {
+    display: flex;
+    align-items: center;
+}
+
+
+.end img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.end .rating {
+    margin-right: 10px;
+}
