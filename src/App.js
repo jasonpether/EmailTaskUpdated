@@ -1,39 +1,22 @@
-import './App.css';
-import Header from './Header'
-import HeaderImage from './HeaderImage'
-import FeaturedArticles from './FeaturedArticles'
-import FeaturedTutorials from './FeaturedTutorials'
-import Email from './Email'
-import ListExampleIcon from './ContactInfo';
+import './App.css'
+import React from 'react'
+import HomePage from './routes/HomePage'
+import {Routes, Route} from 'react-router-dom'
+import LoginPage from './routes/LoginPage';
+import SignUpPage from './routes/SignUpPage';
+import NavigationBar from './routes/NavigationBar';
+import SignUpTest from './routes/SignUpTest';
 
 function App() {
   return (
-    <div>
-      <Header
-        title="DEV@DEAKIN" 
-        placeholder="Search..." 
-        button1="Post" 
-        button2="Login" 
-      />
-      <HeaderImage />
-
-      <FeaturedArticles 
-      title="Featured Articles"
-      />
-
-      <FeaturedTutorials
-      title="Featured Tutorials"
-      />
-
-      <Email
-      title="SIGN UP FOR OUR DAILY INSIDER"
-      placeholder="Enter your Email!"
-      button1="Subscribe"
-      />
-
-      <ListExampleIcon />
-
-    </div>
+    <Routes>
+    <Route path='/' element={<NavigationBar/>}>
+      <Route index element={<HomePage/>} />
+      <Route path='/Login' element={<LoginPage/>} />
+      <Route path='/signup' element={<SignUpTest/>} />
+    </Route>
+    
+    </Routes>
   );
 }
 export default App;
