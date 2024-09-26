@@ -3,9 +3,10 @@ import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA_PYpQiyDzVCO5zpRZQ_Rmw_W6yvu-jG4",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: "deakin-web-app-44b48.firebaseapp.com",
   projectId: "deakin-web-app-44b48",
   storageBucket: "deakin-web-app-44b48.appspot.com",
